@@ -4,24 +4,13 @@ let today = new Date().toLocaleString(undefined, {
     day: "numeric",
   });
 // Adding array
-const items = [{
+const items =JSON.parse(localStorage.getItem('records'))?JSON.parse(localStorage.getItem('records')): [{
     id:1,
     item:'Complete task',
     createdDate: today,
+}
     
-   },
-   {
-    id:2,
-    item:'Study Javascript',
-    createdDate: today,
-   
-   },
-   {
-    id:3,
-    item:'ants',
-    createdDate: today,
-   
-   }
+
                 ];
   
   // Original Loop
@@ -39,14 +28,14 @@ const items = [{
     });
   }
 //   Sort by Function
-function sortby(){
-    items.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-    showItems(items);
-}
+// function sortby(){
+//     items.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+//     showItems(items);
+// }
 
 
     showItems(items); //Executes the loop
-  // Add Function
+//   Add Function
   function add() {
     let id = items.length + 1;
     let item = document.getElementById("Input1").value;
@@ -56,6 +45,7 @@ function sortby(){
     items.push(addText);
     showItems(items);
   }
+
 
 function Search() {
     SearchText = document.getElementById("Input2").value;
@@ -68,7 +58,27 @@ function Search() {
    }
 
 function deleteItem(){
-    const itemId = items.indexOf(items);
+    const itemId = items.indexOf(items.item);
     const removeTask = items.splice(itemId, 1);
     showItems(items);
 }   
+function sortList() {
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("sortby");
+    switching = true;
+    while (switching) {
+      switching = false;
+      b = list.getElementsByTagName("LI");
+      for (i = 0; i < b.length - 1; i++) {
+        shouldSwitch = false;
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  }

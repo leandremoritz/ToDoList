@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="styles.css">
 <script src="https://kit.fontawesome.com/28c2fb0c61.js" crossorigin="anonymous"></script>
 <body>
+
     <div class="box">
+        <h1>To Do List</h1>
     <div class="search">
         <form onsubmit="event.preventDefault()">
             <button type="submit" onclick="Search()" ><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -27,7 +29,7 @@
             <ul type=checkbox id="list"></ul>
         </div>
         <form onsubmit="event.preventDefault()">
-            <button type="submit" onclick="sortby()" >Sort by (Alphabetical order)</button>
+            <button type="submit" id="sortby" onclick="sortby()" >Sort by </button>
               
             </form>
         
