@@ -4,7 +4,7 @@ let today = new Date().toLocaleString(undefined, {
     day: "numeric",
   });
 // Adding array
-const items =JSON.parse(localStorage.getItem('records'))?JSON.parse(localStorage.getItem('records')): [{
+let items =JSON.parse(localStorage.getItem('records')) ? JSON.parse(localStorage.getItem('records')): [{
     id:1,
     item:'Complete task',
     createdDate: today,
@@ -41,8 +41,8 @@ const items =JSON.parse(localStorage.getItem('records'))?JSON.parse(localStorage
     let item = document.getElementById("Input1").value;
     let createdDate = today
     addText = {id,item,createdDate};
-
     items.push(addText);
+    localStorage.setItem("records", JSON.stringify(items));
     showItems(items);
   }
 
@@ -60,8 +60,10 @@ function Search() {
 function deleteItem(){
     const itemId = items.indexOf(items.item);
     const removeTask = items.splice(itemId, 1);
+    localStorage.setItem('records', JSON.stringify(items) );
     showItems(items);
 }   
+
 function sortList() {
     var list, i, switching, b, shouldSwitch;
     list = document.getElementById("sortby");
