@@ -1,0 +1,80 @@
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+      padding-top: 15%;
+      padding-left: 35%;
+    font-weight:bolder;
+    font-size:20px;
+      color:white
+     
+  }
+  div{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 2%;
+      padding-top: 2%;
+      width: 30vw;
+      
+  }
+  form{
+    padding-left: 5%;
+  }
+  input{
+    font-size:25px
+  }
+  button{
+    font-size:25px
+  }
+  
+  
+  /* ul{
+      list-style-type:none;
+      display:flex;
+      flex-direction: column;
+      flex-wrap:nowrap;
+    }
+    li{
+        background-color: rgb(0, 0, 0);
+        padding: 1%;
+        
+        flex-wrap:nowrap;
+       
+    } */
+    div {
+
+        padding-bottom: 2%;
+
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 317.6px;
+        list-style-type:none;
+      display:flex;
+      flex-direction: column;
+      flex-wrap:nowrap;
+    }
+
+    li {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        padding: 1%;
+        
+        flex-wrap:nowrap;
+    }
+
+    #delBtn {
+        width: 324.6px;
+    }
+
+    #delBtn{font-size: smaller;}
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+  

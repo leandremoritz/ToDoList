@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    
+</head>
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/28c2fb0c61.js" crossorigin="anonymous"></script>
+<body>
+    <div class="box">
+    <div class="search">
+        <form onsubmit="event.preventDefault()">
+            <button type="submit" onclick="Search()" ><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="textbox"  type="text" name="Input2" id="Input2" placeholder="Search"/>
+        </form>
+    </div>
+    <div  class="add">
+        <form onsubmit="event.preventDefault()">
+        <button type="submit" onclick="add()" >✚</button>
+          <input class="textbox" type="text" name="Input1" id="Input1" placeholder="Add"/>
+        </form>
+    </div>
+        <div class="ul_stuff">
+            <ul type=checkbox id="list"></ul>
+        </div>
+        <form onsubmit="event.preventDefault()">
+            <button type="submit" onclick="sortby()" >Sort by (Alphabetical order)</button>
+              
+            </form>
+        
+    </div>
+        
+
+
+    <script src="script.js"></script>
+</body>
+</html>
